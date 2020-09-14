@@ -18,6 +18,7 @@ class ItemTests(TestCase):
             quantity=1,
             weight=None,
             purchase_date='2020-9-1',
+            expiry_date='2020-10-1',
             price=5,
             group=test_group,
             storage=test_storage,
@@ -34,5 +35,6 @@ class ItemTests(TestCase):
         self.assertEquals(name, 'Bun')
         self.assertEquals(quantity, '1')
         self.assertEquals(purchase_date, '2020-09-01')
+        self.assertEquals(expiry_date, '2020-10-01')
         self.assertEquals(group, 'YES')
         self.assertEquals(storage, 'GARBAGE CAN')
