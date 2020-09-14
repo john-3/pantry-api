@@ -8,7 +8,6 @@ from .models import Item, Group, Storage
 class ItemTests(TestCase):
 
     @classmethod
-
     def setUpTestData(cls):
         test_group = Group.objects.create(name='YES')
         test_storage = Storage.objects.create(name='GARBAGE CAN')
@@ -30,6 +29,7 @@ class ItemTests(TestCase):
         name = f'{item.name}'
         quantity = f'{item.quantity}'
         purchase_date = f'{item.purchase_date}'
+        expiry_date = f'{item.expiry_date}'
         group = f'{item.group}'
         storage = f'{item.storage}'
         self.assertEquals(name, 'Bun')
