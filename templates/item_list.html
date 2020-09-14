@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% for item in all_item_list reversed %}
+
+{% if item.storage|lower == view.kwargs.slug %}
+
+<a href="{% url 'item_detail' item.storage.slug item.pk %}">{{ item }}</a>
+<br>
+{{ view.kwargs }} || purchased on {{ item.purchase_date }}
+<br>
+<br>
+
+{% endif %}
+{% endfor %}
+
+{% endblock content %}
